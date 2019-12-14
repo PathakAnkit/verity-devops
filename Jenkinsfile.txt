@@ -1,36 +1,49 @@
 pipeline {
+
     agent any
-    stages {
+
+    stages {		
 		
-	// *****ALL CODE TO BE ADDED BELOW THIS COMMENT*****
-				
+
+	// *****ALL CODE TO BE ADDED BELOW THIS COMMENT*****	
+
+			
+
 	//Code starts for stage Clean
+
         stage('Clean') {
 
-            steps {
+        steps {
 
-                sh 'mvn clean'
+             sh 'mvn clean'
 
-            }
+           }
 
         }
-		
+
 	//Code ends for stage Clean
 
-        //Code starts for stage PMD
+		
+
+		
+
+		
+
+	//Code starts for stage PMD
+
 	stage('PMD') {
 
-            steps {
+        steps {
 
-                sh 'mvn site'
+              sh 'mvn site'
 
-            }
+           }
 
         }
-       //Code ends for stage PMD	
+
+	//Code ends for stage PMD	
 		
 		
-		// *****ALL CODE TO BE ADDED ABOVE THIS COMMENT*****
-	}
+		// *****ALL CODE TO BE ADDED ABOVE THIS COMMENT*****	
     }
 }
